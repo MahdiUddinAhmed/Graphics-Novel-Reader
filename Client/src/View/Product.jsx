@@ -89,7 +89,7 @@ const Product = ({item}) => {
   return (
     <Container>
         <Circle/>
-        <Image src = {item.img}/>
+        <Image src = {item.coverimg}/>
             <Info>
                 <Icon>
                     <ShoppingCartOutlined/>
@@ -100,7 +100,7 @@ const Product = ({item}) => {
             <   Icon>
                     <FavoriteBorderOutlined/>
                 </Icon>
-                <Button><a style={linksStyle} href= "/product">READ NOW!</a></Button>  
+                <Button><a style={linksStyle} href= {`/comic/${item.id}`}>READ NOW!</a></Button>  
                
         </Info>
         

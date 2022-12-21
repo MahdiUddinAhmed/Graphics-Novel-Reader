@@ -5,17 +5,22 @@ import Announcement from "../View/Announcement";
 import Footer from "../View/Footer";
 import Navbar from "../View/Navbar";
 import Newsletter from "../View/Newsletter";
-import Chapters from "../View/Chapters";
+import Chapters from "../View/ComicPages";
+
+import {useParams} from "react-router-dom";
+import { getChapterPages } from '../ComicData';
 
 const Container = styled.div`
     background-color: #232020;
 `
-const Chapter = () => {
+const Chapter = (items) => {
+  const {comicId, chapterId} = useParams();
+  const chapterPages = getChapterPages(comicId, chapterId);
   return (
     <Container>
         <Announcement/>
         <Navbar/>
-        <Chapters/>
+        <Chapters pages={chapterPages}/>
         <Newsletter/>
         <Footer/>
     </Container>

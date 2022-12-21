@@ -79,11 +79,18 @@ const Button = styled.button `
     transform: scale(1.1);
 }
 `
-const ListSort = ({item}) => {
+
+const linksStyle = {
+    textDecoration: 'none',
+    color: 'white',
+    marginRight: '20px'
+}
+const ComicList = ({item}) => {
+    console.log(item);
   return (
     <Container>
         <Circle/>
-        <Image src = {item.img}/>
+        <Image src = {item.coverimg}/>
             <Info>
                 <Icon>
                     <ShoppingCartOutlined/>
@@ -94,7 +101,8 @@ const ListSort = ({item}) => {
             <   Icon>
                     <FavoriteBorderOutlined/>
                 </Icon>
-                <Button>READ NOW!</Button>      
+                <Button><a style={linksStyle} href= {`/comic/${item.id}`}>READ NOW!</a></Button>  
+               
         </Info>
         
 
@@ -102,4 +110,4 @@ const ListSort = ({item}) => {
   )
 }
 
-export default ListSort
+export default ComicList

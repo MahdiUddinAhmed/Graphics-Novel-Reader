@@ -36,7 +36,7 @@ router.post("/login", async(req, res) => {
     const {username, password} = req.body;
     login(username,password);
     const accessToken = jwt.sign({id: username, password}, "t4389utjh", {expiresIn: "5d"});
-    const refreshToken = jwt.sign({id: username, password}, "329rhf28rh8932hjr2389", {expiresIn: "7d"});
+    const refreshToken = jwt.sign({id: username, password}, "329rhf28rh8932hjr2389", {expiresIn: "1d"});
     try {
         const user = await User.findOne({username});
         if(user === null){

@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 
 // import page files
 import App from './App';
-import ProductList from "./pages/ProductList";
-import Product from "./pages/Product";
+import Comiclist from "./pages/Comiclist";
+import ComicDesc from "./pages/ComicDesc";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Chapter from './pages/Chapter';
@@ -19,9 +19,9 @@ ReactDOM.render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/products" element={<ProductList />} />
-        <Route path="/chapter" element={<Chapter />} />
+        <Route path="/comiclist" element={<Comiclist />} />
+        <Route path="/comic/:comicId" element={<ComicDesc />} />
+        <Route path="/comic/:comicId/chapter/:chapterId" element={<Chapter />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

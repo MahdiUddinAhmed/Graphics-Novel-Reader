@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import Navbar from "../View/Navbar";
 import Announcement from "../View/Announcement";
-import ListSorts from "../View/ListSorts";
+import ComicLists from "../View/ComicLists";
 import Newsletter from "../View/Newsletter";
 import Footer from "../View/Footer";
 
@@ -46,7 +46,7 @@ const Option = styled.option `
 `
 
 
-const ProductList = () => {
+const Comiclist = () => {
   return (
     <Container>
       <Navbar />
@@ -83,11 +83,11 @@ const ProductList = () => {
           </FilterText>
         </Filter>
       </FilterContainer>
-      <ListSorts />
+      <ComicLists />
       <Newsletter />
       <Footer />
     </Container>
   );
 };
 
-export default ProductList;
+export default Comiclist;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { comics } from 'E:/Personal Project/Graphics-Novel-Reader/Graphics-Novel-Reader/Client/src/ComicData'
-import Product from './Product'
+import ComicList from 'E:/Personal Project/Graphics-Novel-Reader/Graphics-Novel-Reader/Client/src/View/ComicList'
 const Container = styled.div `
     padding: 2px;
     display: flex;
@@ -10,14 +10,14 @@ const Container = styled.div `
     background-color:#2d2922;
     color: #2d2922;
 `;
-const Products = ({item}) => {
+const ComicLists = ({item}) => {
   return (
     <Container>
         {comics.map(item =>
-            (<Product item = {item} key={item.id}/>
+            (<ComicList item = {item} key={item.id}/>
             ))}
     </Container>
   )
 }
 
-export default Products
+export default ComicLists

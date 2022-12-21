@@ -55,7 +55,7 @@ const CatagoryItem = ({item}) => {
         <Image src = {item.img}/>
         <Info>
             <Title><Info2>{item.title}</Info2></Title>
-            <Button><a style={linksStyle} href = "/products">READ NOW!</a></Button>
+            <Button><a style={linksStyle} href = "/comiclist">READ NOW!</a></Button>
         </Info>
     </Container>
   )
