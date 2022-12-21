@@ -10,8 +10,10 @@ const Container = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  height: 90vh;
+  height: 100%;
   object-fit: cover;
+  margin-top: 20px;
+  margin-bottom: 20px;
  
 `;
 
