@@ -1,9 +1,10 @@
+#weImportcodehere
 import { Email, Facebook, Instagram, Phone, Pinterest, Room, Twitter, YouTube } from '@material-ui/icons'
 import styled from 'styled-components'
 import React from 'react'
 const Container = styled.div `
     display: flex;
-   
+#This is styled component   
 `;
 const Left = styled.div `
     flex: 1;
